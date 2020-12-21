@@ -1,0 +1,72 @@
+ESP-32
+
+#PIN kiosztás:
+
+TFT 	  |	ESP
+
+VCC	  -	3V3
+GND	  -	GND
+CS 	  -	15
+RESET	  -	4
+DC	  -	2
+SDI(MOSI) -	23
+SCK	  -	18
+LED	  -	3V3
+SCK(MISO) -	19
+
+* Ha kell a touchscreen funkcionalitás is, akkor:
+T_CLK	  -	18
+T_CS	  -	21
+T_DIN	  -	23
+T_DO	  -	19
+T_IRQ	  -	SEHOVÁ
+
+#Ha új a projekt,
+Töltsd le ezt a könyvtárat: TFT_eSPI
+a UserSetup file-t írd felül a a github mappában lévőre:
+Arduino->File->beállítások->Vázlatfüzet helye->  /libraries/TFT_eSPI/User_Setup.h   <- ezt írd felül.
+
+Igazából csak ki vannak kommentelgetve benne a PIN beállítások
+
+# Példaproektek:
+* A Keypad_240x320 gyönyörűen működik, kapsz egy numerikus billentyűzetet a kijelzőn,
+a bepötyögött számokat szépen elküldi a serial portra.
+Ha újra kellene kalibrálni a kijelzőt, akkor a REPEAT_CAL értékét állítsd truera
+(Ezt kijelzőn egy beállítások menüvel is meg lehetne oldani később)
+
+* A TFT_Meters pedig animációt jelenít meg a kijelzőn
+
+
+Komplett oktatóvideó:
+https://www.youtube.com/watch?v=rq5yPJbX_uk
+
+
+
+
+##Touchscreen típusa:
+
+2.8 Inch ILI9341 240x320 SPI TFT LCD Display Touch Panel SPI Serial Port Module
+
+https://www.banggood.com/2_8-Inch-ILI9341-240x320-SPI-TFT-LCD-Display-Touch-Panel-SPI-Serial-Port-Module-p-1206782.html?rmmds=myorder&cur_warehouse=CN
+
+Specifications:
+ 
+Type: Touch Panel
+Screen: 2.8" SPI Serial
+Display area: 46(W) X 65(H)mm
+Size: 86 x 50 mm
+Driver element: a-Si TFT active matrix
+Pixel arrangement: RGB vertical stripe
+Driver IC: ILI9341
+Backlight: White LED
+Viewing direction: 6 o’clock
+Color depth: 262K/65K
+Resolution (dots): 240RGB*320Dots
+5V compatible, use with 3.3V or 5V logic
+Need at least 4 IOs from your MCU
+With PCB plate (including power supply IC, SD), compatible with 5110 interface
+ 
+Package included:
+ 
+1 x 2.8" TFT LCD Display Touch Panel Module
+1 x Touch Pen
